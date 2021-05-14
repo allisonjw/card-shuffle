@@ -1,10 +1,15 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Deck.css';
 
 export const Deck = () => {
   return (
-    <div className="Deck">
+    <section className="deck_section">
           Deck of Cards
-    </div>
+          <Link to='/homepage'>
+            <button className='back_btn' >Back to Homepage</button>
+          </Link>
+    </section>
   );
 }
 
