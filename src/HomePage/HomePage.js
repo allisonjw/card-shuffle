@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './HomePage.css';
+import './HomePage.scss';
 import { Link } from 'react-router-dom';
+import flyingCards from '../CardImages/playing-cards.png';
 
 export const HomePage = () => {
     const [newPlayerName, setNewPlayerName] = useState('');
@@ -14,7 +15,7 @@ export const HomePage = () => {
     };
     
     return(
-        <section className="section_form">
+        <section className="section_form" style={{ backgroundImage:`url(${flyingCards})` }}>
             <form className="player_form" onSubmit={(e) => handleSubmit(e)}>
                 <input 
                     id="input_player"

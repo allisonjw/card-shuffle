@@ -1,3 +1,11 @@
+%button-input-styling {
+    font-size: 1.5em;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background-color: ghostwhite;
+}
+
 .section_form {
     background-color: #b3b0b094;
     height: 100vmax;
@@ -11,29 +19,24 @@
 }
 
 .player_input {
-    border: none;
-    border-radius: 7px;
-    font-size: 1.5em;
+    @extend %button-input-styling;
     padding: .8em;
     transition: all .3s;
     margin-bottom: 1%;
     box-shadow: 5px 7px 8px #00000024;
-    outline: none;
 }
 
 .player_btn {
-    border: none;
-    box-shadow: 6px 5px 7px 0px #00000024;;
+    @extend %button-input-styling;
+    box-shadow: 6px 5px 7px 0px #00000024;
     cursor: pointer;
     font-size: 1.3em;
     padding: 1.5em;
-    background-color: white;
-    border-radius: 3px;
     color: black;
-    font-size: 1.5em;
     font-weight: 600;
         &:hover {
             background-color: rgba(62, 119, 62, 0.918);
+            transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(1px);
         }
 }
   
