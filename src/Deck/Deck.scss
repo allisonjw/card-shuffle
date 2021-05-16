@@ -3,7 +3,7 @@
     outline: none;
     border: none;
     border-radius: 7px;
-    background-color: ghostwhite;
+    background-color: #dd2302;
     padding: .8em;
     font-weight: 600;
     cursor: pointer;
@@ -11,13 +11,11 @@
 
 .deck_section {
     background-color: #dddddd;
-    height: 100vh;
     padding-top: 2%;
 }
 
 .back_btn {
     @extend %button-styling;
-    background-color: #dd2302;
     box-shadow: 8px 10px 7px 0px #0000004d;
         &:hover {
             background-color: rgba(243, 160, 160, 0.918);
@@ -27,10 +25,12 @@
 
 .deck_card {
     width: 10em;
+    margin: 5px;
 }
 
 .shuffle_button {
     @extend %button-styling;
+    font-size: 2em;
     &:hover {
         background-color: rgba(204, 198, 198, 0.918);
         transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(1px);
@@ -38,10 +38,13 @@
 }
 
 .card_section {
-    width: 50%;
     margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .shuffle_button-section {
-    padding-top: 15%;
+    padding: 3% 3%;
 }
