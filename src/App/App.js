@@ -4,13 +4,8 @@ import './App.scss';
 import HomePage from '../HomePage/HomePage';
 import Header from '../Header/Header';
 import Deck from '../Deck/Deck';
-import allImages from '../ImageData/imageArr';
 
 export const App = () => {
-  // const getAllImages = allImages.map(card => card.image)
-  
-  const getAllImages = allImages.map(deck => <Deck key={deck.id} image={deck.image} />)
-  console.log('image', getAllImages)
   return (
     <section className="App">
       <Switch>
