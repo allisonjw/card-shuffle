@@ -13,7 +13,7 @@ export const HomePage = () => {
         };
         setNewPlayerName('')
     };
-    
+
     return(
         <section className="section_form" style={{ backgroundImage:`url(${flyingCards})` }}>
             <h1>Welcome to Card Shuffle</h1>

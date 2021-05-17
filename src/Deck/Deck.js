@@ -4,13 +4,16 @@ import './Deck.scss';
 import allImages from '../ImageData/imageArr';
 
 export const Deck = () => {
-    
+
     const shuffleDeck = () => {
-        const imageArr = allImages.map(deck => deck.image)  
-        const shuffled = imageArr.sort(() => Math.random() - 0.5)
-        console.log('shuffle sort', shuffled)
-        return shuffled.map((card) => <img alt="card" src={card} className="deck_card"></img>)
-    };
+        for (let i = 0; i < 52; i++) {
+          let tempCard = allImages[i];
+          var randomIndex = Math.floor(Math.random() * 52);
+          allImages[i] = allImages[randomIndex];
+          allImages[randomIndex] = tempCard
+        }
+        return allImages.map((card) => <img alt="card" src={card.image} key={card.id} className="deck_card"></img>)
+      }
 
   return (
     <section className="deck_section">

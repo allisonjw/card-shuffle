@@ -4,13 +4,8 @@ import Deck from './Deck';
 import { shallow } from 'enzyme';
 
 describe('Deck', () => {
-  let wrapper;
-
-  beforeEach(() => {
-    wrapper = shallow(<Deck />)
-  });
-
-  it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+  it('should return one parent section', () => {
+    const wrapper = shallow(<Deck />);
+    expect(wrapper.find('.deck_section')).toHaveLength(1);
   });
 });

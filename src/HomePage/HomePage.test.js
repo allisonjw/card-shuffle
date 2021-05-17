@@ -1,16 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import HomePage from './HomePage';
 import { shallow } from 'enzyme';
 
 describe('HomePage', () => {
-  let wrapper;
+  it('should call handleSubmit when button is clicked', () => {
+    const wrapper = shallow(<HomePage />);
+    wrapper.instance().handleSubmit = jest.fn();
+    wrapper.find('.player_form').simulate('click', { preventDefault: jest.fn() });
+    expect(wrapper.instance().handleSubmit).toHaveBeenCalled();
 
-  beforeEach(() => {
-    wrapper = shallow(<HomePage />)
   });
-
-  it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+  it('should return one parent section', () => {
+    const wrapper = shallow(<HomePage />);
+    expect(wrapper.find('.section_form')).toHaveLength(1);
   });
 });

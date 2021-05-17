@@ -7,7 +7,7 @@ import Deck from '../Deck/Deck';
 
 export const App = () => {
   return (
-    <section className="App">
+    <section className="app_section">
       <Switch>
         <Route exact path='/homepage' render={() => <HomePage />} />
         <Route path='/deck' render={() => <> <Header /> <Deck /> </>}/>

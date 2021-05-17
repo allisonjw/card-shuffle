@@ -4,13 +4,8 @@ import Header from './Header';
 import { shallow } from 'enzyme';
 
 describe('Header', () => {
-  let wrapper;
-
-  beforeEach(() => {
-    wrapper = shallow(<Header />)
-  });
-
-  it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+  it('should return one parent section', () => {
+    const wrapper = shallow(<Header />);
+    expect(wrapper.find('.header_section')).toHaveLength(1);
   });
 });
