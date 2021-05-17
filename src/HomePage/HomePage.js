@@ -16,6 +16,7 @@ export const HomePage = () => {
     
     return(
         <section className="section_form" style={{ backgroundImage:`url(${flyingCards})` }}>
+            <h1>Welcome to Card Shuffle</h1>
             <form className="player_form" onSubmit={(e) => handleSubmit(e)}>
                 <input 
                     id="input_player"

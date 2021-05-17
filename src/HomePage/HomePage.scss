@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@500;600&display=swap");
+
 %button-input-styling {
     font-size: 1.5em;
     outline: none;
@@ -11,11 +13,21 @@
     height: 100vmax;
 }
 
+h1 {
+    font-size: 7em;
+    font-family: inherit;
+    font-weight: 900;
+    margin: 0;
+    padding-top: 11%;
+    color: #cf1307;
+    text-shadow: 7px 7px 7px #00000066;
+}
+
 .player_form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 14%;
+    padding-top: 6%;
 }
 
 .player_input {
